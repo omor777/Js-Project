@@ -6,7 +6,90 @@
     <title>Tip - Calculator</title>
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
-  <body>
-
+  <body class="h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <section class="mx-auto mt-24 w-[32rem] rounded-md bg-white p-4">
+      <!-- title -->
+      <h1
+        class="overflow-hidden rounded-md py-2 text-center text-xl font-bold uppercase tracking-[2px] text-purple-700"
+      >
+        tip calculator
+      </h1>
+      <!-- form -->
+      <form class="py-8">
+        <!-- amount -->
+        <div>
+          <label for="amount" class="mb-2 block text-lg font-medium"
+            >How mush was your bill?</label
+          >
+          <input
+            type="text"
+            id="amount"
+            class="mb-4 w-full rounded-md border-2 border-gray-500 py-2 pl-4 font-mono text-lg font-semibold outline-none focus:border-2 focus:border-purple-600 focus:bg-gray-200"
+            placeholder="Bill Amount"
+          />
+        </div>
+        <!-- service starts here -->
+        <div>
+          <label for="tip" class="mb-2 block text-lg font-medium"
+            >How was your service?</label
+          >
+          <select
+            name="tip"
+            id="tip"
+            class="mb-4 w-full rounded-md bg-purple-500 py-3 text-lg font-semibold text-white outline-none"
+          >
+            <option
+              class="py-4 text-center text-lg font-medium disabled:text-white"
+              disabled
+              selected
+              value="0"
+            >
+              Choose an option
+            </option>
+            <option class="py-4 text-center text-lg font-medium" value="0.30">
+              30% - Outstanding
+            </option>
+            <option class="py-4 text-center text-lg font-medium" value="0.20">
+              20% - Good
+            </option>
+            <option class="py-4 text-center text-lg font-medium" value="0.15">
+              15% - It was OK
+            </option>
+            <option class="py-4 text-center text-lg font-medium" value="0.10">
+              30% - Bad
+            </option>
+            <option class="py-4 text-center text-lg font-medium" value="0.10">
+              5% - Terrible
+            </option>
+          </select>
+        </div>
+        <!-- how much people -->
+        <div>
+          <label for="amount" class="mb-2 block text-lg font-medium"
+            >How mush was your bill?</label
+          >
+          <input
+            type="text"
+            id="amount"
+            class="mb-4 w-full rounded-md border-2 border-gray-500 py-2 pl-4 font-mono text-lg font-semibold outline-none focus:border-2 focus:border-purple-600 focus:bg-gray-200"
+            placeholder="Number of people"
+          />
+        </div>
+        <button
+          type="button"
+          class="px mx-auto my-4 block rounded-md bg-purple-500 px-14 py-2 font-medium uppercase text-white transition duration-300 ease-linear hover:bg-purple-700"
+        >
+          calculate
+        </button>
+        <!-- calculate result -->
+        <div class="h-0 overflow-hidden">
+          <div class="mt-12 flex flex-col items-center gap-1">
+            <h3 class="text-xl font-bold uppercase text-red-700">tip amount</h3>
+            <p class="text-3xl font-bold">$10</p>
+            <p class="text-xl font-medium capitalize">each</p>
+          </div>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
