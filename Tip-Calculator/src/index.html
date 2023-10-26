@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tip - Calculator</title>
     <link rel="stylesheet" href="../dist/output.css" />
+    <!-- font awesome script tag -->
+    <script
+      src="https://kit.fontawesome.com/10d3ee6fa1.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500">
     <section class="mx-auto mt-24 w-[32rem] rounded-md bg-white p-4 shadow-lg">
@@ -17,64 +22,94 @@
       <!-- form -->
       <form class="py-8">
         <!-- amount -->
-        <div>
+        <div class="mb-6">
           <label for="amount" class="mb-2 block text-lg font-medium"
             >How mush was your bill?</label
           >
-          <input
-            type="text"
-            value=""
-            id="bill-amount"
-            class="mb-4 w-full rounded-md border-2 border-gray-500 py-2 pl-4 text-lg font-semibold outline-none focus:border-2 focus:border-purple-600 focus:bg-purple-100"
-            placeholder="Bill Amount"
-          />
+          <div class="flex items-center gap-3">
+            <div class="dollar text-xl text-purple-500">
+              <i class="fa-solid fa-money-bill-1-wave"></i>
+            </div>
+            <input
+              type="text"
+              value=""
+              id="bill-amount"
+              class="w-full rounded-md border-2 border-gray-500 py-2 pl-4 text-lg font-semibold outline-none focus:border-2 focus:border-purple-600 focus:bg-purple-100"
+              placeholder="Bill Amount"
+            />
+          </div>
+          <small
+            id="bill"
+            class="invisible ml-10 mt-1 tracking-[2px] text-red-600"
+            >Please enter your bill amount</small
+          >
         </div>
         <!-- service starts here -->
-        <div>
+        <div class="mb-6">
           <label for="tip" class="my-2 block text-lg font-medium"
             >How was your service?</label
           >
-          <select
-            name="tip"
-            id="tip"
-            class="mb-4 w-full rounded-md bg-purple-500 py-3 text-lg font-semibold text-white outline-none"
-          >
-            <option
-              class="py-4 text-center text-lg font-medium disabled:text-white"
-              disabled
-              selected
+          <div class="flex items-center gap-3">
+            <div class="text-2xl text-purple-500">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <select
+              name="tip"
+              id="tip"
+              class="w-full rounded-md bg-purple-500 py-3 text-lg font-semibold text-white outline-none"
             >
-              Choose an option
-            </option>
-            <option class="py-4 text-center text-lg font-medium" value="30">
-              30% - Outstanding
-            </option>
-            <option class="py-4 text-center text-lg font-medium" value="20">
-              20% - Good
-            </option>
-            <option class="py-4 text-center text-lg font-medium" value="15">
-              15% - It was OK
-            </option>
-            <option class="py-4 text-center text-lg font-medium" value="10">
-              10% - Bad
-            </option>
-            <option class="py-4 text-center text-lg font-medium" value="5">
-              5% - Terrible
-            </option>
-          </select>
+              <option
+                class="py-4 text-center text-lg font-medium disabled:text-white"
+                disabled
+                selected
+              >
+                Choose an option
+              </option>
+              <option class="py-4 text-center text-lg font-medium" value="30">
+                30% - Outstanding
+              </option>
+              <option class="py-4 text-center text-lg font-medium" value="20">
+                20% - Good
+              </option>
+              <option class="py-4 text-center text-lg font-medium" value="15">
+                15% - It was OK
+              </option>
+              <option class="py-4 text-center text-lg font-medium" value="10">
+                10% - Bad
+              </option>
+              <option class="py-4 text-center text-lg font-medium" value="5">
+                5% - Terrible
+              </option>
+            </select>
+          </div>
+          <small
+            id="option"
+            class="invisible ml-10 mt-1 tracking-[2px] text-red-600"
+            >Please choose an option</small
+          >
         </div>
         <!-- how much people -->
-        <div>
+        <div class="mb-6">
           <label for="amount" class="my-2 block text-lg font-medium"
             >How many people are sharing the bill?</label
           >
-          <input
-            type="text"
-            value=""
-            id="how-many-people"
-            class="mb-4 w-full rounded-md border-2 border-gray-500 py-2 pl-4 text-lg font-semibold outline-none focus:border-2 focus:border-purple-600 focus:bg-purple-100"
-            placeholder="Number of people"
-          />
+          <div class="flex items-center gap-3">
+            <div class="text-xl text-purple-500">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <input
+              type="text"
+              value=""
+              id="how-many-people"
+              class="w-full rounded-md border-2 border-gray-500 py-2 pl-4 text-lg font-semibold outline-none focus:border-2 focus:border-purple-600 focus:bg-purple-100"
+              placeholder="Number of people"
+            />
+          </div>
+          <small
+            id="person"
+            class="invisible ml-10 mt-1 tracking-[2px] text-red-600"
+            >Please enter how many people</small
+          >
         </div>
         <button
           type="button"

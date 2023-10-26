@@ -10,6 +10,9 @@ function main() {
   const peoples = id("how-many-people");
   const tips = id("tip");
   const calculate = id("calculate");
+  const bill = id("bill");
+  const option = id("option");
+  const person = id("person");
 
   calculate.addEventListener("click", function (e) {
     if (
@@ -21,8 +24,22 @@ function main() {
       !isNaN(peoples.value)
     ) {
       tipCalculation(billAmount.value, peoples.value, tips.value);
+    }
+    // input validation check
+    if (billAmount.value === "" || isNaN(billAmount.value)) {
+      bill.classList.remove("invisible");
     } else {
-      alert("Please enter the value");
+      bill.classList.add("invisible");
+    }
+    if (tips.value === "" || isNaN(tips.value)) {
+      option.classList.remove("invisible");
+    } else {
+      option.classList.add("invisible");
+    }
+    if (peoples.value === "" || isNaN(peoples.value)) {
+      person.classList.remove("invisible");
+    } else {
+      person.classList.add("invisible");
     }
   });
 }
