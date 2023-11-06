@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .panel {
+    @apply transi flex grow flex-col items-center justify-center bg-purple-500 bg-cover bg-center text-[20px] text-white;
+  }
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+
+@layer utilities {
+  .transi {
+    transition:
+      font-size 0.7s cubic-bezier(0.63, -0.11, 0.68, -0.03),
+      flex 0.7s cubic-bezier(0.63, -0.11, 0.68, -0.03),
+      background 0.2s;
+  }
+}
+
+.panel > * {
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.72),
+    0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+  transition: transform 0.5s;
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
