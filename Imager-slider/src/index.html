@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="font-[helvetica neue] text-[20px] font-extralight">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <!-- font awesome script tag -->
+    <script
+      src="https://kit.fontawesome.com/10d3ee6fa1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="flex flex-col gap-4">
+      <!-- image slider -->
+      <div class="img-slider relative">
+        <p class="absolute left-0 top-0 px-4 py-2 font-medium text-white">
+          <span class="leftNum">1</span>
+          <span class="divider">/</span>
+          <span class="rightNum">3</span>
+        </p>
+        <img
+          id="slider-img"
+          src="https://www.w3schools.com/howto/img_mountains_wide.jpg"
+          class="w-full"
+        />
+        <!-- button container -->
+        <div
+          class="btn-container absolute left-2/4 top-2/4 flex w-full -translate-x-2/4 -translate-y-2/4 items-center justify-between text-xl text-white"
+        >
+          <a
+            class="prev cursor-pointer select-none rounded px-4 py-4 opacity-80 transition-all hover:bg-black"
+            >❮</a
+          >
+          <a
+            class="next cursor-pointer select-none rounded px-4 py-4 opacity-80 transition-all hover:bg-black"
+            >❯</a
+          >
+        </div>
+        <!-- caption -->
+        <div class="absolute bottom-5 left-2/4 -translate-x-2/4">
+          <p
+            id="caption"
+            class="font-medium capitalize -tracking-tighter text-white drop-shadow-2xl"
+          >
+            caption text
+          </p>
+        </div>
+      </div>
+      <!-- indicator -->
+      <div class="indicator flex items-center justify-center flex-wrap gap-3">
+        <!-- single indicator -->
+        <!-- <button
+          class="item h-4 w-4 rounded-full bg-gray-400 transition-all hover:bg-gray-600"
+        ></button>
+        <button
+          class="item h-4 w-4 rounded-full bg-gray-400 transition-all hover:bg-gray-600"
+        ></button>
+        <button
+          class="item h-4 w-4 rounded-full bg-gray-400 transition-all hover:bg-gray-600"
+        ></button>
+        <button
+          class="item h-4 w-4 rounded-full bg-gray-400 transition-all hover:bg-gray-600"
+        ></button> -->
+      </div>
+    </div>
+    <!-- add script file -->
+    <script src="app.js"></script>
+  </body>
+</html>
